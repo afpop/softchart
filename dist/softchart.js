@@ -43,6 +43,8 @@
                 {
                     scope.setup = {};
                     scope.setup.type = 'bar';
+                    scope.setup.showLabel = {};
+                    scope.setup.showLabel.enabled = false;
                 }
 
                 $timeout(_createGraph, 200); // da tempo do angular setar o id do canvas
