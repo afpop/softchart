@@ -1,7 +1,7 @@
 # softchart
 Chart directive with Angularjs and Chartjs
 
-<softchart id="'grfTeste'" setup="vm.setup" dataset="vm.dataset" label="vm.label"></softchart>
+        <softchart id="'grfTeste'" setup="vm.setup" dataset="vm.dataset" label="vm.label"></softchart>
 
 vm.setup = {};
         vm.setup.type = 'bar';
