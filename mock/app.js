@@ -8,13 +8,14 @@ angular.module('todoApp', ['softchart.directive'])
         vm.setup.type = 'bar';
         vm.setup.stackY = true;
         vm.setup.stackX = true;
+        vm.setup.showLabel = { enabled: true, type: "H" };
 
         vm.label = ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"];
 
         vm.dataset = [
             {
                 label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3],
+                data: [12.1, 19.5, 3.3, 5.9, 2.7, 3.2],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
