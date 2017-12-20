@@ -1,0 +1,1 @@
+angular.module('softchart.directive').run(['$templateCache', function($templateCache) {$templateCache.put('softchart.html','\n<div class="softchart">\n\n    <canvas ng-attr-id="{{::id}}"></canvas>\n\n</div>\n');}]);

@@ -1,0 +1,47 @@
+{
+  "name": "softchat",
+  "version": "0.0.1",
+  "authors": [
+    "Joao Paulo Oliveira"
+  ],
+  "description": "Chart directive with Angularjs and Chartjs",
+  "main": [
+    "./dist/softchart.js",
+    "./dist/softchart.css"
+  ],
+  "dependencies": {
+    "angular": ">1.5.8",
+    "angular-sanitize": "*",
+    "font-awesome": "*",
+    "chart.js": "^2.7.1"
+  },
+  "keywords": [
+    "soft",
+    "chart",
+    "angular",
+    "angularjs",
+    "softwillians"
+  ],
+  "license": "Softwillians License",
+  "homepage": "none",
+  "private": false,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "config",
+    "playground",
+    "src",
+    "test",
+    ".travis.yml",
+    ".gitignore",
+    ".jshintrc",
+    "CHANGELOG.md",
+    "Gruntfile.js",
+    "package.json",
+    "build",
+    "mock"
+  ]
+}

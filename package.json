@@ -1,0 +1,28 @@
+{
+  "name": "softchart",
+  "version": "0.0.1",
+  "description": "Chart directive with Angularjs and Chartjs.",
+  "main": "softchart.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "softwillians",
+    "soft",
+    "chart",
+    "angular",
+    "angularjs"
+  ],
+  "author": "João Oliveira",
+  "license": "ISC",
+  "dependencies": {
+    "angularjs": "0.0.1",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-angular-templatecache": "^2.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^3.0.0"
+  }
+}
