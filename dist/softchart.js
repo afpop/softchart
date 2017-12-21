@@ -21,6 +21,7 @@
             link: function (scope, element, attrs) {
 
                 var first = true;
+                var myChart;
 
                 if(scope.setup)
                 {
@@ -51,12 +52,15 @@
 
                 function _createGraph(){
 
+                    if(!first)
+                        myChart.destroy();
+
                     //pega o canvas
                     var ctxa = document.getElementById(scope.id);
 
                     var ctx = ctxa.getContext('2d');
 
-                    var myChart = new Chart(ctx, {
+                    myChart = new Chart(ctx, {
                         type: scope.setup.type,
                         data: {
                             labels: scope.label,
