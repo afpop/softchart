@@ -67,6 +67,7 @@
                             datasets: scope.dataset
                         },
                         options: {
+                            onClick: _callback,
                             scales: {
                                 responsive: true,
                                 xAxes: [{
@@ -75,6 +76,7 @@
                                 yAxes: [{
                                     stacked: scope.setup.stackY,
                                     ticks: {
+                                        max: scope.setup.maxY ? scope.setup.maxY : undefined,
                                         beginAtZero:true
                                     }
                                 }]
@@ -89,6 +91,15 @@
                     });
 
                     first = false;
+                }
+
+                function _callback(event, item){
+
+                    if(scope.setup.callback)
+                    {
+                        if(item.length > 0)
+                            scope.setup.callback(item[0]._model.label);
+                    }
                 }
 
                 function _format(value, context){

@@ -9,6 +9,9 @@ angular.module('todoApp', ['softchart.directive'])
         vm.setup.stackY = true;
         vm.setup.stackX = true;
         vm.setup.showLabel = { enabled: true, type: "H" };
+        vm.setup.callback = _callback;
+
+        //vm.setup.maxY = 12;
 
         vm.label = ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"];
 
@@ -34,4 +37,8 @@ angular.module('todoApp', ['softchart.directive'])
                 ]
             }
         ];
+
+        function _callback(item){
+            console.log(item);
+        }
     });
