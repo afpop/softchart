@@ -119,6 +119,9 @@
                         }
                         else if(scope.setup.showLabel.type === "H"){
 
+                            if(value <= 0)
+                                return "";
+
                             var h = Math.trunc(value);
 
                             var m = Math.ceil((value - h) * 10);
