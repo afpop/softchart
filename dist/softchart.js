@@ -98,7 +98,15 @@
                     if(scope.setup.callback)
                     {
                         if(item.length > 0)
-                            scope.setup.callback(item[0]._model.label);
+                        {
+                            scope.setup.callback(
+                                {
+                                    index: item[0]._index,
+                                    label: item[0]._model.label,
+                                    labelIndex: scope.label[item[0]._index]
+                                }
+                            );
+                        }
                     }
                 }
 
