@@ -84,7 +84,9 @@
                             plugins: {
                                 datalabels: {
                                     display: scope.setup.showLabel.enabled,
-                                    formatter: _format
+                                    formatter: _format,
+                                    color: "black",
+                                    anchor: "center"
                                 }
                             }
                         }
@@ -122,16 +124,10 @@
                             if(value <= 0)
                                 return "";
 
-                            var h = Math.trunc(value);
+                            var hours = Math.floor(value);
+                            var minutes = Math.floor(value * 60 % 60);
 
-                            var m = Math.ceil((value - h) * 10);
-                            h = m >= 60 ? h + 1 : h;
-                            m = m * 6;
-                            m = m >= 60 ? 0 : m;
-                            m = m < 10 ? '0' + m : m;
-                            h = h < 10 ? '0' + h : h;
-
-                            return h + ":" + m;
+                            return hours + ":" + minutes;
                         }
                         else
                             return value;
