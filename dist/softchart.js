@@ -39,6 +39,10 @@
                         scope.setup.showLabel = {};
                         scope.setup.showLabel.enabled = false;
                     }
+
+                    if(!scope.setup.axes){
+                        scope.setup.axes = {x: true, y: true};
+                    }
                 }
                 else
                 {
