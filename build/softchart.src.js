@@ -77,7 +77,10 @@
                                     stacked: scope.setup.stackY,
                                     ticks: {
                                         max: scope.setup.maxY ? scope.setup.maxY : undefined,
-                                        beginAtZero:true
+                                        beginAtZero: true,
+                                        callback: function(value, index, values){
+                                            return _format(value);
+                                        }
                                     }
                                 }]
                             },
@@ -87,6 +90,13 @@
                                     formatter: _format,
                                     color: "black",
                                     anchor: "center"
+                                }
+                            },
+                            tooltips: {
+                                callbacks: {
+                                    label: function(tooltipItem, data) {
+                                        return tooltipItem.xLabel + ": " + _format(tooltipItem.yLabel);
+                                    }
                                 }
                             }
                         }
