@@ -46,6 +46,7 @@
                     scope.setup.type = 'bar';
                     scope.setup.showLabel = {};
                     scope.setup.showLabel.enabled = false;
+                    scope.setup.axes = {x: true, y: true};
                 }
 
                 $timeout(_createGraph, 200); // da tempo do angular setar o id do canvas
@@ -71,9 +72,11 @@
                             scales: {
                                 responsive: true,
                                 xAxes: [{
+                                    display: scope.setup.axes.x,
                                     stacked: scope.setup.stackX
                                 }],
                                 yAxes: [{
+                                    display: scope.setup.axes.y,
                                     stacked: scope.setup.stackY,
                                     ticks: {
                                         max: scope.setup.maxY ? scope.setup.maxY : undefined,

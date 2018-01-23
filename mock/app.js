@@ -5,7 +5,8 @@ angular.module('todoApp', ['softchart.directive'])
 
 
         vm.setup = {};
-        vm.setup.type = 'bar';
+        vm.setup.type = 'pie';
+        vm.setup.axes = {x: false, y: false};
         vm.setup.stackY = true;
         vm.setup.stackX = true;
         vm.setup.showLabel = { enabled: true, type: "H" };
