@@ -95,7 +95,7 @@
                             tooltips: {
                                 callbacks: {
                                     label: function(tooltipItem, data) {
-                                        return tooltipItem.xLabel + ": " + _format(tooltipItem.yLabel);
+                                        return data.datasets[tooltipItem.datasetIndex].label + ": " + _format(tooltipItem.yLabel);
                                     }
                                 }
                             }
