@@ -77,7 +77,10 @@
                                 responsive: true,
                                 xAxes: [{
                                     display: scope.setup.axes.x,
-                                    stacked: scope.setup.stackX
+                                    stacked: scope.setup.stackX,
+                                    ticks:{
+                                        autoSkip: false
+                                    }
                                 }],
                                 yAxes: [{
                                     display: scope.setup.axes.y,
