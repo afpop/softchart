@@ -144,8 +144,9 @@
                             if(value <= 0)
                                 return "";
 
-                            var hours = Math.floor(value);
-                            var minutes = Math.floor(value * 60 % 60);
+                            var hours = Math.round(value, -1);
+                            var minutes = Math.round(value * 60 % 60, -1);
+
                             hours = hours < 10 ? "0" + hours : hours;
                             minutes = minutes < 10 ? "0" + minutes : minutes;
                             return hours + ":" + minutes;
