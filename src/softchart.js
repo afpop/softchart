@@ -146,6 +146,7 @@
 
                             var hours = Math.floor(value);
                             var minutes = Math.round(value * 60 % 60, -1);
+                            minutes = minutes >= 60 ? 0 : minutes;
 
                             hours = hours < 10 ? "0" + hours : hours;
                             minutes = minutes < 10 ? "0" + minutes : minutes;
