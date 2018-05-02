@@ -137,7 +137,7 @@
                     if(scope.setup.showLabel.enabled){
 
                         if(scope.setup.showLabel.type === "%"){
-                            return Math.round(value*100) + '%';
+                            return Math.round(value) + '%';
                         }
                         else if(scope.setup.showLabel.type === "H"){
 
