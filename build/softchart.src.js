@@ -43,6 +43,9 @@
                     if(!scope.setup.axes){
                         scope.setup.axes = {x: true, y: true};
                     }
+
+                    if(!scope.setup.legend)
+                        scope.setup.legend = { enabled: true };
                 }
                 else
                 {
@@ -51,6 +54,7 @@
                     scope.setup.showLabel = {};
                     scope.setup.showLabel.enabled = false;
                     scope.setup.axes = {x: true, y: true};
+                    scope.setup.legend = { enabled: true };
                 }
 
                 $timeout(_createGraph, 200); // da tempo do angular setar o id do canvas
@@ -114,6 +118,9 @@
 
                                     }
                                 }
+                            },
+                            legend: {
+                                display: scope.setup.legend.enabled
                             }
                         }
                     });
