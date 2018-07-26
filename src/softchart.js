@@ -105,7 +105,13 @@
                             tooltips: {
                                 callbacks: {
                                     label: function(tooltipItem, data) {
-                                        return data.datasets[tooltipItem.datasetIndex].label + ": " + _format(tooltipItem.yLabel);
+
+                                        if(scope.setup.type == "pie"){
+                                            return data.datasets[tooltipItem.datasetIndex].label + ": " + _format(data.datasets[0].data[tooltipItem.index]);
+                                        }
+                                        else
+                                            return data.datasets[tooltipItem.datasetIndex].label + ": " + _format(tooltipItem.yLabel);
+
                                     }
                                 }
                             }
@@ -134,8 +140,6 @@
 
                 function _format(value, context){
 
-                    if(scope.setup.showLabel.enabled){
-
                         if(scope.setup.showLabel.type === "%"){
                             return Math.round(value) + '%';
                         }
@@ -157,8 +161,6 @@
                         }
                         else
                             return value;
-                    }
-
                 }
 
                 scope.$watch('dataset', function (){
