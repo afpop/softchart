@@ -111,7 +111,7 @@
                                     label: function(tooltipItem, data) {
 
                                         if(scope.setup.type == "pie"){
-                                            return data.datasets[tooltipItem.datasetIndex].label + ": " + _format(data.datasets[0].data[tooltipItem.index]);
+                                            return data.labels[tooltipItem.index][0] + ": " + _format(data.datasets[0].data[tooltipItem.index]);
                                         }
                                         else
                                             return data.datasets[tooltipItem.datasetIndex].label + ": " + _format(tooltipItem.yLabel);
